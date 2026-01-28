@@ -1,8 +1,11 @@
 # Project Proposal - Review Scraping & LLM Extraction System
 
 **Client:** Anders Schonberg
+
 **Prepared by:** Sujal
+
 **Date:** January 28, 2026
+
 **Estimated Timeline:** 3-6 weeks (phased approach)
 
 ---
@@ -115,16 +118,16 @@ After analyzing the project requirements in detail, I'm proposing a **phased del
 
 **Time Breakdown:**
 
-| Task                                                 | Hours           |
-| ---------------------------------------------------- | --------------- |
-| G2 scraper (auth, pagination, anti-bot, idempotency) | 18-20           |
-| Product Hunt scraper/API                             | 3-5             |
-| LLM extraction pipeline + prompts                    | 12-14           |
-| Quote anchoring validation (v1)                      | 6-8             |
-| Controlled vocabulary workshop + implementation      | 5-6             |
-| Azure Blob + SQL setup                               | 6-8             |
-| Testing with 5 products                              | 3-5             |
-| **Total**                                      | **55-60** |
+| Task                                                 | Hours     |
+| ---------------------------------------------------- | --------- |
+| G2 scraper (auth, pagination, anti-bot, idempotency) | 18-20     |
+| Product Hunt scraper/API                             | 3-5       |
+| LLM extraction pipeline + prompts                    | 12-14     |
+| Quote anchoring validation (v1)                      | 6-8       |
+| Controlled vocabulary workshop + implementation      | 5-6       |
+| Azure Blob + SQL setup                               | 6-8       |
+| Testing with 5 products                              | 3-5       |
+| **Total**                                            | **55-60** |
 
 **Why This Works:**
 
@@ -159,16 +162,16 @@ After analyzing the project requirements in detail, I'm proposing a **phased del
 
 **Time Breakdown:**
 
-| Task                                    | Hours           |
-| --------------------------------------- | --------------- |
-| Capterra family scrapers (3 sites)      | 16-18           |
-| Expand to 25 products (testing, tuning) | 6-8             |
-| Weekly automation (Azure Functions)     | 6-8             |
-| Monitoring & alerting system            | 5-6             |
-| Quote validation refinement (→95%)     | 3-5             |
-| Controlled vocabulary refinement        | 2-3             |
-| End-to-end testing & bug fixes          | 3-4             |
-| **Total**                         | **45-50** |
+| Task                                    | Hours     |
+| --------------------------------------- | --------- |
+| Capterra family scrapers (3 sites)      | 16-18     |
+| Expand to 25 products (testing, tuning) | 6-8       |
+| Weekly automation (Azure Functions)     | 6-8       |
+| Monitoring & alerting system            | 5-6       |
+| Quote validation refinement (→95%)      | 3-5       |
+| Controlled vocabulary refinement        | 2-3       |
+| End-to-end testing & bug fixes          | 3-4       |
+| **Total**                               | **45-50** |
 
 ---
 
@@ -304,14 +307,14 @@ Team Adoption, Permissions, Search, Templates
 
 ## Risks & Mitigations
 
-| Risk                                        | Impact | Mitigation                                                            |
-| ------------------------------------------- | ------ | --------------------------------------------------------------------- |
-| **Sites block/rate-limit scrapers**   | High   | Human-like delays, user-agent rotation, residential proxies if needed |
-| **DOM structure changes**             | High   | Modular selectors, automated breakage detection, 3-day fix SLA        |
-| **LLM extraction quality <95%**       | Medium | Iterative prompt refinement, controlled vocabulary, human spot-checks |
-| **Quote anchoring edge cases**        | Medium | Robust normalization, fuzzy matching, log failures for analysis       |
+| Risk                                 | Impact | Mitigation                                                            |
+| ------------------------------------ | ------ | --------------------------------------------------------------------- |
+| **Sites block/rate-limit scrapers**  | High   | Human-like delays, user-agent rotation, residential proxies if needed |
+| **DOM structure changes**            | High   | Modular selectors, automated breakage detection, 3-day fix SLA        |
+| **LLM extraction quality <95%**      | Medium | Iterative prompt refinement, controlled vocabulary, human spot-checks |
+| **Quote anchoring edge cases**       | Medium | Robust normalization, fuzzy matching, log failures for analysis       |
 | **Scale: 25 products × 500 reviews** | Medium | Batch processing, parallel scraping, efficient rate limiting          |
-| **Azure storage costs**               | Low    | JSONL is compressed, ~100MB per weekly run                            |
+| **Azure storage costs**              | Low    | JSONL is compressed, ~100MB per weekly run                            |
 
 ---
 
@@ -399,8 +402,3 @@ The phased approach balances speed (3 weeks to first insights) with quality (95%
 **However, Phase 1 MVP (65-75 hours) delivers immediate value** and proves the concept before committing to full scale.
 
 Let's discuss which approach makes most sense for your needs.
-
----
-
-**Prepared by:** Sujal
-**Date:** January 28, 2026
